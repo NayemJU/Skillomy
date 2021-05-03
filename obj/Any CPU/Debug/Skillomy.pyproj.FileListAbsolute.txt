@@ -1,0 +1,3 @@
+E:\PythonProject\411Project\Skillomy_Elearning_Webapp\Skillomy\obj\Any CPU\Debug\Skillomy.pyproj.CoreCompileInputs.cache
+E:\PythonProject\411Project\Skillomy_Elearning_Webapp\Skillomy\bin\Microsoft.PythonTools.WebRole.dll
+E:\PythonProject\411Project\Skillomy_Elearning_Webapp\Skillomy\bin\wfastcgi.py

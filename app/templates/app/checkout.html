@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block main-content %}
+<div class="container">
+ <div class="row mt-5">
+  <div class="col-sm-6">
+    <h4>Order Summary</h4>
+    <hr>
+    {% for items in cart_item %}
+      <div class="card mb-2">
+        <div class="card-body">
+          <h5>Product: {{items.course.title}}</h5>
+          <p class="fw-bold">Price: {{items.total_cost}}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <p class="fw-bold">Total Cost: {{total_ammount}}</p>
+    <small>Term and Condition: Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ullam saepe! Iure optio repellat dolor velit, minus rem. Facilis cumque neque numquam laboriosam, accusantium adipisci nisi nihil in et quis?</small>
+  </div>
+  <div class="col-sm-4 offset-sm-1">
+    <h4>Select Billing Address</h4>
+    <hr>
+    <form action="">
+      {% for ad in address %}
+      <div class="card">
+        <div class="card-body">
+        <p>Name:{{ad.name}}</p>
+        <p>City:{{ad.city}}</p>
+        <p>State:{{ad.state}}</p>
+        <p>zipcode: {{ad.zipcode}}</p>
+        </div>
+      </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Continue</button>
+        </div>
+        {% endfor %}
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock main-content %}
